@@ -1,0 +1,71 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="passager_list_view">
+      <field name="name">passager list</field>
+      <field name="model">kevol.passager</field>
+      <field name="arch" type="xml">
+        <tree>
+<field name="nom"/>
+<field name="prenom"/>
+<field name="date_naissance"/>
+<field name="statut"/>
+<field name="telephone"/>
+        </tree>
+      </field>
+    </record>
+ <record model="ir.ui.view" id="passager_form_view">
+<field name="name">Passager Form</field>
+<field name="model">kevol.passager</field>
+<field name="arch" type="xml">
+<form>
+<group>
+<field name="nom"/>
+<field name="prenom"/>
+<field name="date_naissance"/>
+<field name="statut"/>
+<field name="telephone"/>
+
+</group>
+</form>
+</field>
+</record>
+
+    <record model="ir.actions.act_window" id="passager_action_window">
+      <field name="name">passager window</field>
+      <field name="res_model">kevol.passager</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="vol.action_server">
+      <field name="name">vol server</field>
+      <field name="model_id" ref="model_vol_vol"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Kevol" id="kevol.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Passagers" id="kevol_passager_cat" parent="kevol.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of passagers" id="kevol_passager_list" parent="kevol_passager_cat"
+              action="passager_action_window"/>
+
+  </data>
+</odoo>

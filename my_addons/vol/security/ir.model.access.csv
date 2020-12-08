@@ -5,3 +5,4 @@ access_vol_pilote,vol_pilote,model_vol_pilote,base.group_user,1,1,1,1
 access_vol_passager,vol_passager,model_vol_passager,base.group_user,1,1,1,1
 access_vol_billet,vol_billet,model_vol_billet,base.group_user,1,1,1,1
 access_vol_siege,vol_siege,model_vol_siege,base.group_user,1,1,1,1
+access_vol_compagnie,vol_compagnie,model_vol_compagnie,base.group_user,1,1,1,1

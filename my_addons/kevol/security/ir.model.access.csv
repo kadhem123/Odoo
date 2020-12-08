@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kevol_vol,kevol_vol,model_kevol_vol,base.group_user,1,1,1,1
+access_kevol_compagnie,kevol_compagnie,model_kevol_compagnie,base.group_user,1,1,1,1
+access_kevol_passager,kevol_passager,model_kevol_passager,base.group_user,1,1,1,1
+access_kevol_avion,kevol_avion,model_kevol_avion,base.group_user,1,1,1,1
+access_kevol_siege,kevol_siege,model_kevol_siege,base.group_user,1,1,1,1
+access_kevol_billet,kevol_billet,model_kevol_billet,base.group_user,1,1,1,1
+access_kevol_pilote,kevol_pilote,model_kevol_pilote,base.group_user,1,1,1,1

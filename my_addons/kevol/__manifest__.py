@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "vol",
+    'name': "kevol",
 
     'summary': """
-        Module Vol""",
+       Module qui organise les vols par compagnie , pilote et avion """,
 
     'description': """
-        Long description of module's purpose
+       Module qui organise les vols par compagnie , pilote et avion
     """,
 
-    'author': "Kadhem & Eya",
+    'author': "My Company",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -23,13 +23,13 @@
 
     # always loaded
     'data': [
-     'security/ir.model.access.csv',
+         'security/ir.model.access.csv',
         'views/vol_views.xml',
-        'views/passager_views.xml',
         'views/compagnie_views.xml',
-        'views/billet_views.xml',
+        'views/passager_views.xml',
         'views/avion_views.xml',
         'views/siége_views.xml',
+        'views/billet_views.xml',
         'views/pilote_views.xml'
 
     ],

@@ -2,25 +2,25 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="vol.list">
+    <record model="ir.ui.view" id="kevol_compagnie_list">
       <field name="name">compagnie list</field>
-      <field name="model">vol.compagnie</field>
+      <field name="model">kevol.compagnie</field>
       <field name="arch" type="xml">
         <tree>
 <field name="nom"/>
-<field name="siége_social"/>
+<field name="siege_social"/>
 
         </tree>
       </field>
     </record>
  <record model="ir.ui.view" id="compagnie_form_view">
 <field name="name">Compagnie Form</field>
-<field name="model">vol.compagnie</field>
+<field name="model">kevol.compagnie</field>
 <field name="arch" type="xml">
 <form>
 <group>
 <field name="nom"/>
-<field name="siége_social"/>
+<field name="siege_social"/>
 
 </group>
 </form>
@@ -29,7 +29,7 @@
 
     <record model="ir.actions.act_window" id="compagnie_action_window">
       <field name="name">compagnie window</field>
-      <field name="res_model">vol.compagnie</field>
+      <field name="res_model">kevol.compagnie</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -51,23 +51,20 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="Vol" id="vol.menu_root"/>
+    <menuitem name="kevol" id="kevol.menu_root"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Vols" id="vol_passager_cat" parent="vol.menu_root"/>
-          <menuitem name="Passager" id="vol_passager_cat" parent="vol.menu_root"/>
-          <menuitem name="Compagnie" id="vol_compagnie_cat" parent="vol.menu_root"/>
+          <menuitem name="Compagnie" id="kevol_compagnie_cat" parent="kevol.menu_root"/>
 
     <!-- actions -->
 
-    <menuitem name="List of vols" id="vol_vol_list" parent="vol_vol_cat"
+    <menuitem name="List of vols" id="kevol_vol_list" parent="kevol_vol_cat"
               action="vol_action_window"/>
 
-    <menuitem name="List of passagers" id="vol_passager_list" parent="vol_passager_cat"
-              action="passager_action_window"/>
 
-    <menuitem name="List of compagnies" id="vol_compagnie_list" parent="vol_compagnie_cat"
+
+    <menuitem name="List of compagnies" id="kevol_compagnie_list" parent="kevol_compagnie_cat"
               action="compagnie_action_window"/>
   </data>
 </odoo>

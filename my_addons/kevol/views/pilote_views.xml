@@ -1,0 +1,70 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="pilote_list_view">
+      <field name="name">pilote list</field>
+      <field name="model">kevol.pilote</field>
+      <field name="arch" type="xml">
+        <tree>
+<field name="nom"/>
+<field name="prenom"/>
+<field name="qualif"/>
+
+        </tree>
+      </field>
+    </record>
+ <record model="ir.ui.view" id="pilote_form_view">
+<field name="name">Pilote Form</field>
+<field name="model">kevol.pilote</field>
+<field name="arch" type="xml">
+<form>
+<group>
+<field name="nom"/>
+<field name="prenom"/>
+<field name="qualif"/>
+
+</group>
+</form>
+</field>
+</record>
+
+    <record model="ir.actions.act_window" id="pilote_action_window">
+      <field name="name">pilote window</field>
+      <field name="res_model">kevol.pilote</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="vol.action_server">
+      <field name="name">vol server</field>
+      <field name="model_id" ref="model_vol_vol"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Kevol" id="kevol.menu_root"/>
+
+    <!-- menu categories -->
+
+          <menuitem name="Pilote" id="kevol_pilote_cat" parent="kevol.menu_root"/>
+
+    <!-- actions -->
+
+
+
+
+    <menuitem name="List of pilotes" id="kevol_pilote_list" parent="kevol_pilote_cat"
+              action="pilote_action_window"/>
+  </data>
+</odoo>
