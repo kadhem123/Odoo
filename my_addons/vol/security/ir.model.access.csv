@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vol_vol,vol_vol,model_vol_vol,base.group_user,1,1,1,1
+access_vol_avion,vol_avion,model_vol_avion,base.group_user,1,1,1,1
+access_vol_pilote,vol_pilote,model_vol_pilote,base.group_user,1,1,1,1
+access_vol_passager,vol_passager,model_vol_passager,base.group_user,1,1,1,1
+access_vol_billet,vol_billet,model_vol_billet,base.group_user,1,1,1,1
+access_vol_siege,vol_siege,model_vol_siege,base.group_user,1,1,1,1

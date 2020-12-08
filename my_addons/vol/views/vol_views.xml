@@ -1,0 +1,70 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="vol.list">
+      <field name="name">vol list</field>
+      <field name="model">vol.vol</field>
+      <field name="arch" type="xml">
+        <tree>
+<field name="date_depart"/>
+<field name="date_arrivée"/>
+<field name="ville_depart"/>
+<field name="ville_arrivee"/>
+<field name="retard"/>
+        </tree>
+      </field>
+    </record>
+ <record model="ir.ui.view" id="vol_form_view">
+<field name="name">Vol Form</field>
+<field name="model">vol.vol</field>
+<field name="arch" type="xml">
+<form>
+<group>
+<field name="date_depart"/>
+<field name="date_arrivée"/>
+<field name="ville_depart"/>
+<field name="ville_arrivee"/>
+<field name="retard"/>
+
+</group>
+</form>
+</field>
+</record>
+
+    <record model="ir.actions.act_window" id="vol_action_window">
+      <field name="name">vol window</field>
+      <field name="res_model">vol.vol</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="vol.action_server">
+      <field name="name">vol server</field>
+      <field name="model_id" ref="model_vol_vol"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Vol" id="vol.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Vols" id="vol_vol_cat" parent="vol.menu_root"/>
+    <!-- actions -->
+
+    <menuitem name="List of vols" id="vol_vol_list" parent="vol_vol_cat"
+              action="vol_action_window"/>
+
+  </data>
+</odoo>
