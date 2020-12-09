@@ -2,6 +2,13 @@ from odoo import models, fields
 
 class KevolBillet(models.Model):
     _name = 'kevol.billet'
-    date_emission = fields.Datetime('Date Emission')
-    date_reservation = fields.Datetime('Date Réservation')
-    date_paiement = fields.Datetime('Date Paiement')
+    dateEmission = fields.Datetime('Date Emission')
+    dateReservation = fields.Datetime('Date Réservation')
+    datePaiement = fields.Datetime('Date Paiement')
+    siege_id = fields.Many2one(comodel_name='kevol.siege')
+    vol_id = fields.Many2one(comodel_name='kevol.vol')
+    passager_id = fields.Many2one(comodel_name='kevol.passager')
+
+
+
+

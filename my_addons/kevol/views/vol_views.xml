@@ -7,11 +7,11 @@
       <field name="model">kevol.vol</field>
       <field name="arch" type="xml">
         <tree>
-    <field name="date_depart"/>
+    <field name="dateDepart"/>
 
-<field name="date_arrive"/>
-<field name="ville_depart"/>
-<field name="ville_arrive"/>
+<field name="dateArrive"/>
+<field name="villeDepart"/>
+<field name="villeArrive"/>
 <field name="retard"/>
         </tree>
       </field>
@@ -22,11 +22,15 @@
 <field name="arch" type="xml">
 <form>
 <group>
-<field name="date_depart"/>
-<field name="date_arrive"/>
-<field name="ville_depart"/>
-<field name="ville_arrive"/>
+<field name="dateDepart"/>
+<field name="dateArrive"/>
+<field name="villeDepart"/>
+<field name="villeArrive"/>
 <field name="retard"/>
+<field name="avion_id"/>
+    <field name="pilote_id"/>
+    <field name="passager_ids"/>
+    <field name="compagnie_ids"/>
 
 </group>
 </form>

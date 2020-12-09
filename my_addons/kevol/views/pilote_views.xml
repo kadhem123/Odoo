@@ -7,7 +7,7 @@
       <field name="model">kevol.pilote</field>
       <field name="arch" type="xml">
         <tree>
-<field name="nom"/>
+<field name="name"/>
 <field name="prenom"/>
 <field name="qualif"/>
 
@@ -20,9 +20,12 @@
 <field name="arch" type="xml">
 <form>
 <group>
-<field name="nom"/>
+<field name="name"/>
 <field name="prenom"/>
 <field name="qualif"/>
+
+<field name="compagnie_id"/>
+<field name="avion_id"/>
 
 </group>
 </form>

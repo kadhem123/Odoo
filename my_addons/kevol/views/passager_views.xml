@@ -7,9 +7,9 @@
       <field name="model">kevol.passager</field>
       <field name="arch" type="xml">
         <tree>
-<field name="nom"/>
+<field name="name"/>
 <field name="prenom"/>
-<field name="date_naissance"/>
+<field name="dateNaissance"/>
 <field name="statut"/>
 <field name="telephone"/>
         </tree>
@@ -21,9 +21,9 @@
 <field name="arch" type="xml">
 <form>
 <group>
-<field name="nom"/>
+<field name="name"/>
 <field name="prenom"/>
-<field name="date_naissance"/>
+<field name="dateNaissance"/>
 <field name="statut"/>
 <field name="telephone"/>
 

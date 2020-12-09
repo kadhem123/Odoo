@@ -7,8 +7,8 @@
       <field name="model">kevol.siege</field>
       <field name="arch" type="xml">
         <tree>
-<field name="num_allee"/>
-<field name="num_rang"/>
+<field name="numAllee"/>
+<field name="numRang"/>
 <field name="classe"/>
 
         </tree>
@@ -20,9 +20,11 @@
 <field name="arch" type="xml">
 <form>
 <group>
-<field name="num_allee"/>
-<field name="num_rang"/>
+<field name="numAllee"/>
+<field name="numRang"/>
 <field name="classe"/>
+
+<field name="avion_id"/>
 
 </group>
 </form>

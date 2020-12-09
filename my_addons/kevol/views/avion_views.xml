@@ -22,6 +22,8 @@
 <field name="type"/>
 <field name="modele"/>
 <field name="nb"/>
+<field name="siege_ids"/>
+
 
 </group>
 </form>

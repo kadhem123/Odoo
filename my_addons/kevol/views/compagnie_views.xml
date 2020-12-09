@@ -7,7 +7,7 @@
       <field name="model">kevol.compagnie</field>
       <field name="arch" type="xml">
         <tree>
-<field name="nom"/>
+<field name="name"/>
 <field name="siege_social"/>
 
         </tree>
@@ -19,9 +19,9 @@
 <field name="arch" type="xml">
 <form>
 <group>
-<field name="nom"/>
+<field name="name"/>
 <field name="siege_social"/>
-
+ <field name="pilote_id"/>
 </group>
 </form>
 </field>

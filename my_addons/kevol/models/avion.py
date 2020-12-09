@@ -5,3 +5,5 @@ class KevolAvion(models.Model):
     type = fields.Char('Type Avion')
     modele = fields.Char('Modele Avion')
     nb = fields.Char('Nombre passagers')
+    siege_ids = fields.One2many(comodel_name='kevol.siege',
+                                      inverse_name='avion_id')

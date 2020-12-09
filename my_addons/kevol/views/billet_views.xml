@@ -7,9 +7,9 @@
       <field name="model">kevol.billet</field>
       <field name="arch" type="xml">
         <tree>
-<field name="date_emission"/>
-<field name="date_reservation"/>
-<field name="date_paiement"/>
+<field name="dateEmission"/>
+<field name="dateReservation"/>
+<field name="datePaiement"/>
 
         </tree>
       </field>
@@ -20,9 +20,12 @@
 <field name="arch" type="xml">
 <form>
 <group>
-<field name="date_emission"/>    
-<field name="date_reservation"/>
-<field name="date_paiement"/>    
+<field name="dateEmission"/>
+<field name="dateReservation"/>
+<field name="datePaiement"/>
+<field name="siege_id"/>
+<field name="vol_id"/>
+<field name="passager_id"/>
 
 </group>
 </form>
