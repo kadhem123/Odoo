@@ -6,8 +6,8 @@ class KevolPilote(models.Model):
     prenom = fields.Char('Prénom Pilote')
     qualif = fields.Char('Qualifications')
     compagnie_id = fields.Many2one(comodel_name='kevol.compagnie')
-    avion_id = fields.Many2one(comodel_type='kevol.avion')
-    compagnie_id = fields.Many2one(comodel_type='kevol.compagnie')
+    avion_id = fields.Many2one(comodel_name='kevol.avion')
+    compagnie_id = fields.Many2one(comodel_name='kevol.compagnie')
 
 
 

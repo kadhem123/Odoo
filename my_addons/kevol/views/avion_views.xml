@@ -23,9 +23,16 @@
 <field name="modele"/>
 <field name="nb"/>
 <field name="siege_ids"/>
+<field name="compagnie_id"/>
+
 
 
 </group>
+        <notebook>
+        <page string="List of sieges">
+                            <field name="siege_ids"/>
+                        </page>
+                    </notebook>
 </form>
 </field>
 </record>

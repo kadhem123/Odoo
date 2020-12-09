@@ -23,6 +23,11 @@
 <field name="siege_social"/>
  <field name="pilote_id"/>
 </group>
+    <notebook>
+        <page string="List of pilotes">
+                            <field name="pilote_id"/>
+                        </page>
+                    </notebook>
 </form>
 </field>
 </record>
