@@ -7,6 +7,7 @@
       <field name="model">kevol.vol</field>
       <field name="arch" type="xml">
         <tree>
+            <field name="name"/>
     <field name="dateDepart"/>
 
 <field name="dateArrive"/>
@@ -14,14 +15,18 @@
 <field name="villeArrive"/>
 <field name="retard"/>
         </tree>
+
       </field>
+
     </record>
+
  <record model="ir.ui.view" id="vol_form_view">
 <field name="name">Vol Form</field>
 <field name="model">kevol.vol</field>
 <field name="arch" type="xml">
 <form>
 <group>
+    <field name="name"/>
 <field name="dateDepart"/>
 <field name="dateArrive"/>
 <field name="villeDepart"/>

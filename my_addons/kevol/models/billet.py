@@ -2,6 +2,7 @@ from odoo import models, fields
 
 class KevolBillet(models.Model):
     _name = 'kevol.billet'
+    name=fields.Char('Nom billets')
     dateEmission = fields.Datetime('Date Emission')
     dateReservation = fields.Datetime('Date Réservation')
     datePaiement = fields.Datetime('Date Paiement')

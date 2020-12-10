@@ -2,6 +2,7 @@ from odoo import models, fields
 
 class KeolVol(models.Model):
     _name = 'kevol.vol'
+    name=fields.Char("numero vol")
     dateDepart = fields.Datetime('Date depart')
     dateArrive = fields.Datetime('Date arrivée')
     villeDepart = fields.Char('Ville depart')
@@ -13,5 +14,6 @@ class KeolVol(models.Model):
                                   inverse_name='vol_id')
     compagnie_ids = fields.One2many(comodel_name='kevol.compagnie',
                                   inverse_name='vol_id')
+
 
 
