@@ -30,7 +30,10 @@
         'views/avion_views.xml',
         'views/siége_views.xml',
         'views/billet_views.xml',
-        'views/pilote_views.xml'
+        'views/pilote_views.xml',
+        'reports/billet_card.xml',
+        'reports/report.xml',
+
 
     ],
     # only loaded in demonstration mode

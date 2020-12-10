@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="kevol.report_billet_card">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <h2>Billet card</h2>
+
+            </t>
+        </t>
+    </template>
+
+    <template id="report_billet">
+
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                <h2>Billet card</h2>
+                Name:
+                <t t-esc="doc.name"/>
+                Date Emission:
+                <t t-esc="doc.dateEmission"/>
+                Date Reservation:
+                <t t-esc="doc.dateReservation"/>
+                Date Paiement:
+                <t t-esc="doc.datePaiement"/>
+                siege:
+                <t t-esc="doc.siege_id"/>
+                vol:
+                <t t-esc="doc.vol_id"/>
+                passager:
+                <t t-esc="doc.passager_id"/>
+
+
+            </t>
+            </t>
+        </t>
+    </template>
+</odoo>

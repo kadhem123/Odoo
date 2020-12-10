@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <report
+        id="report_billet_card"
+        string="Billet Card"
+        model="kevol.billet"
+        report_type="qweb-pdf"
+        name="kevol.report_billet"
+        file="kevol.report_billet"/>
+</odoo>

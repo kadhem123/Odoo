@@ -6,7 +6,7 @@
       <field name="name">vol list</field>
       <field name="model">kevol.vol</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree string="Appointements">
             <field name="name"/>
     <field name="dateDepart"/>
 
@@ -15,11 +15,18 @@
 <field name="villeArrive"/>
 <field name="retard"/>
         </tree>
-
       </field>
-
     </record>
-
+      <record id="vol_calendar" model="ir.ui.view">
+            <field name="name">kevol.vol.calendar</field>
+            <field name="model">kevol.vol</field>
+            <field name="arch" type="xml">
+                <calendar string="Appointements Calendar" date_start="dateDepart" date_stop="dateArrive"
+                          color="name">
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
  <record model="ir.ui.view" id="vol_form_view">
 <field name="name">Vol Form</field>
 <field name="model">kevol.vol</field>
@@ -54,7 +61,7 @@
     <record model="ir.actions.act_window" id="vol_action_window">
       <field name="name">vol window</field>
       <field name="res_model">kevol.vol</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">calendar,tree,form</field>
     </record>
 
     <!-- server action to the one above -->
