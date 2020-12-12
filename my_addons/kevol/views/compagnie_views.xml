@@ -2,7 +2,7 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="kevol_compagnie_list">
+    <record model="ir.ui.view" id="compagnie_list">
       <field name="name">compagnie list</field>
       <field name="model">kevol.compagnie</field>
       <field name="arch" type="xml">

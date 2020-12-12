@@ -24,7 +24,7 @@
 <field name="prenom"/>
 <field name="qualif"/>
 
-<field name="avion_id"/>
+<field name="compagnie_id"/>
 
 </group>
 </form>

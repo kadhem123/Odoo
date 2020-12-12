@@ -7,11 +7,10 @@ class KevolPilote(models.Model):
     qualif = fields.Char('Qualifications')
     compagnie_id = fields.Many2one(comodel_name='kevol.compagnie')
     avion_id = fields.Many2one(comodel_name='kevol.avion')
-    compagnie_id = fields.Many2one(comodel_name='kevol.compagnie')
     def name_get(self):
         result = []
         for passager in self:
-            name = passager.name + ' '+ passager.prenom
+            name = passager.name + ' ' + passager.prenom
             result.append((passager.id, name))
             return result
 

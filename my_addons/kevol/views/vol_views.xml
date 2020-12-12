@@ -42,16 +42,13 @@
 <field name="avion_id"/>
     <field name="pilote_id"/>
     <field name="passager_ids"/>
-    <field name="compagnie_ids"/>
 
 </group>
      <notebook>
                         <page string="List of passagers">
                             <field name="passager_ids"/>
                         </page>
-                        <page string="List of compagnies">
-                            <field name="compagnie_ids"/>
-                        </page>
+
 
                     </notebook>
 </form>
