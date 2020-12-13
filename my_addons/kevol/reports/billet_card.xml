@@ -13,26 +13,81 @@
     <template id="report_billet">
 
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="doc">
+            <t t-foreach="docs" t-as="o">
                 <t t-call="web.external_layout">
-                <h2>Billet card</h2>
-                Name:
-                <t t-esc="doc.name"/>
-                Date Emission:
-                <t t-esc="doc.dateEmission"/>
-                Date Reservation:
-                <t t-esc="doc.dateReservation"/>
-                Date Paiement:
-                <t t-esc="doc.datePaiement"/>
-                siege:
-                <t t-esc="doc.siege_id"/>
-                vol:
-                <t t-esc="doc.vol_id"/>
-                passager:
-                <t t-esc="doc.passager_id"/>
+                    <div class="page">
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <div class="oe_structure"/>
+                        <div class="row">
+                            <div class="col-xs-2" style="margin:auto;">
+
+                            </div>
+                            <center>
+                                <div class="col-xs-8" style="margin:auto">
+                                    <table class="table table-condensed" style="border :3px solid black !important;">
+                                        <tr>
+                                            <td width="20%">
+                                                <p style="text-align:center;padding-to:10px;">
+                                                    <img  t-att-src="'kevol/static/description/icon.png' " style="max-height: 30px;"/>
+                                                </p>
+                                                <p style="text-align:center;">
+                                                                        <h2>Billet card</h2>
+
+                                                </p>
+                                            </td>
+                                            <td width="80%">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <p style="text-align:right;">
+                                                                <strong>Name:</strong>
+                                                            </p>
+                                                            <p style="text-align:right;">
+                                                                <strong>Date Emission:</strong>
+                                                            </p>
+                                                            <p style="text-align:right;">
+                                                                <strong>Date Reservation:</strong>
+                                                            </p>
+                                                            <p style="text-align:right;">
+                                                                <strong>Date Paiement:</strong>
+                                                            </p>
+                                                            <p style="text-align:right;">
+                                                                <strong>Siege:</strong>
+                                                            </p>
+                                                            <p style="text-align:right;">
+                                                                <strong>Vol:</strong>
+                                                            </p>
+                                                            <p style="text-align:right;">
+                                                                <strong>passager:</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td>
+                                                            <p style="text-align:left:padding-left:10px;" t-field="o.name"/>
+                                                            <p style="text-align:left:padding-left:10px;" t-field="o.dateEmission"/>
+                                                            <p style="text-align:left:padding-left:10px;" t-field="o.dateReservation"/>
+                                                            <p style="text-align:left:padding-left:10px;" t-field="o.datePaiement"/>
+                                                            <p style="text-align:left:padding-left:10px;" t-field="o.siege_id"/>
+                                                            <p style="text-align:left:padding-left:10px;" t-field="o.vol_id"/>
+                                                            <p style="text-align:left:padding-left:10px;" t-field="o.passager_id"/>
 
 
-            </t>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+
+
+                </t>
             </t>
         </t>
     </template>

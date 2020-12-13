@@ -1,75 +1,74 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="compagnie_list">
-      <field name="name">compagnie list</field>
-      <field name="model">kevol.compagnie</field>
-      <field name="arch" type="xml">
-        <tree>
-<field name="name"/>
-<field name="siege_social"/>
+        <record model="ir.ui.view" id="compagnie_list">
+            <field name="name">compagnie list</field>
+            <field name="model">kevol.compagnie</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="siege_social"/>
 
-        </tree>
-      </field>
-    </record>
- <record model="ir.ui.view" id="compagnie_form_view">
-<field name="name">Compagnie Form</field>
-<field name="model">kevol.compagnie</field>
-<field name="arch" type="xml">
-<form>
-<group>
-<field name="name"/>
-<field name="siege_social"/>
- <field name="pilote_id"/>
-</group>
-    <notebook>
-        <page string="List of pilotes">
-                            <field name="pilote_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="compagnie_form_view">
+            <field name="name">Compagnie Form</field>
+            <field name="model">kevol.compagnie</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="siege_social"/>
+
+                    </group>
+                    <notebook>
+                        <page string="List of pilotes">
+                            <field name="pilote_ids"/>
                         </page>
                     </notebook>
-</form>
-</field>
-</record>
+                </form>
+            </field>
+        </record>
 
-    <record model="ir.actions.act_window" id="compagnie_action_window">
-      <field name="name">compagnie window</field>
-      <field name="res_model">kevol.compagnie</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+        <record model="ir.actions.act_window" id="compagnie_action_window">
+            <field name="name">compagnie window</field>
+            <field name="res_model">kevol.compagnie</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="vol.action_server">
-      <field name="name">vol server</field>
-      <field name="model_id" ref="model_vol_vol"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="vol.action_server">
+          <field name="name">vol server</field>
+          <field name="model_id" ref="model_vol_vol"/>
+          <field name="state">code</field>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
 
-    <!-- Top menu item -->
+        <!-- Top menu item -->
 
-    <menuitem name="kevol" id="kevol.menu_root"/>
+        <menuitem name="kevol" id="kevol.menu_root"/>
 
-    <!-- menu categories -->
+        <!-- menu categories -->
 
-          <menuitem name="Compagnie" id="kevol_compagnie_cat" parent="kevol.menu_root"/>
+        <menuitem name="Compagnie" id="kevol_compagnie_cat" parent="kevol.menu_root"/>
 
-    <!-- actions -->
+        <!-- actions -->
 
-    <menuitem name="List of vols" id="kevol_vol_list" parent="kevol_vol_cat"
-              action="vol_action_window"/>
+        <menuitem name="List of vols" id="kevol_vol_list" parent="kevol_vol_cat"
+                  action="vol_action_window"/>
 
 
-
-    <menuitem name="List of compagnies" id="kevol_compagnie_list" parent="kevol_compagnie_cat"
-              action="compagnie_action_window"/>
-  </data>
+        <menuitem name="List of compagnies" id="kevol_compagnie_list" parent="kevol_compagnie_cat"
+                  action="compagnie_action_window"/>
+    </data>
 </odoo>

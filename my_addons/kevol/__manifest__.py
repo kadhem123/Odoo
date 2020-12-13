@@ -23,17 +23,17 @@
 
     # always loaded
     'data': [
-         'security/ir.model.access.csv',
-        'views/vol_views.xml',
+        'security/ir.model.access.csv',
+
         'views/compagnie_views.xml',
-        'views/passager_views.xml',
         'views/avion_views.xml',
-        'views/siége_views.xml',
-        'views/billet_views.xml',
         'views/pilote_views.xml',
+        'views/passager_views.xml',
+        'views/siege_views.xml',
+        'views/billet_views.xml',
+        'views/vol_views.xml',
         'reports/billet_card.xml',
         'reports/report.xml',
-
 
     ],
     # only loaded in demonstration mode

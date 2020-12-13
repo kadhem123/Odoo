@@ -7,9 +7,6 @@ class Kevolsiege(models.Model):
     classe = fields.Selection([('Economique', 'Economique'), ('Economique Prenium', 'Economique Prenium'),('Business', 'Business'),('Premiére', 'Premiére')])
     _rec_name = 'classe'
     avion_id = fields.Many2one(comodel_name='kevol.avion')
-    def name_get(self):
-        result = []
-        for siege in self:
-            name = siege.classe + ' '+ siege.numAllee +" "+siege.numRang
-            result.append((siege.id, name))
-            return result
+    billet_id = fields.One2many(comodel_name='kevol.billet',
+                             inverse_name='siege_id')
+

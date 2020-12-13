@@ -8,7 +8,6 @@
       <field name="arch" type="xml">
         <tree>
 <field name="name"/>
-<field name="prenom"/>
 <field name="dateNaissance"/>
 <field name="statut"/>
 <field name="telephone"/>
@@ -22,12 +21,14 @@
 <form>
 <group>
 <field name="name"/>
-<field name="prenom"/>
+
 <field name="dateNaissance"/>
 <field name="statut"/>
 <field name="telephone"/>
 
 </group>
+
+
 </form>
 </field>
 </record>

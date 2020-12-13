@@ -7,6 +7,11 @@ class KevolAvion(models.Model):
     modele = fields.Char('Modele Avion')
     nb = fields.Char('Nombre passagers')
     siege_ids = fields.One2many(comodel_name='kevol.siege',
-                                      inverse_name='avion_id')
-    compagnie_id = fields.Many2one(comodel_name='kevol.compagnie')
+                               inverse_name='avion_id')
+    pilote_ids = fields.Many2many(comodel_name='kevol.pilote',
+                                    relation='class_pilote_rel',
+                                    column1='name',
+                                    column2='prenom')
+    vol_id = fields.One2many(comodel_name='kevol.vol',
+                             inverse_name='avion_id')
 

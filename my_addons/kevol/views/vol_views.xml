@@ -1,23 +1,23 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="vol_list_view">
-      <field name="name">vol list</field>
-      <field name="model">kevol.vol</field>
-      <field name="arch" type="xml">
-        <tree string="Appointements">
-            <field name="name"/>
-    <field name="dateDepart"/>
+        <record model="ir.ui.view" id="vol_list_view">
+            <field name="name">vol list</field>
+            <field name="model">kevol.vol</field>
+            <field name="arch" type="xml">
+                <tree string="Appointements">
+                    <field name="name"/>
+                    <field name="dateDepart"/>
 
-<field name="dateArrive"/>
-<field name="villeDepart"/>
-<field name="villeArrive"/>
-<field name="retard"/>
-        </tree>
-      </field>
-    </record>
-      <record id="vol_calendar" model="ir.ui.view">
+                    <field name="dateArrive"/>
+                    <field name="villeDepart"/>
+                    <field name="villeArrive"/>
+                    <field name="retard"/>
+                </tree>
+            </field>
+        </record>
+        <record id="vol_calendar" model="ir.ui.view">
             <field name="name">kevol.vol.calendar</field>
             <field name="model">kevol.vol</field>
             <field name="arch" type="xml">
@@ -27,68 +27,61 @@
                 </calendar>
             </field>
         </record>
- <record model="ir.ui.view" id="vol_form_view">
-<field name="name">Vol Form</field>
-<field name="model">kevol.vol</field>
-<field name="arch" type="xml">
-<form>
-<group>
-    <field name="name"/>
-<field name="dateDepart"/>
-<field name="dateArrive"/>
-<field name="villeDepart"/>
-<field name="villeArrive"/>
-<field name="retard"/>
-<field name="avion_id"/>
-    <field name="pilote_id"/>
-    <field name="passager_ids"/>
-
-</group>
-     <notebook>
-                        <page string="List of passagers">
-                            <field name="passager_ids"/>
-                        </page>
+        <record model="ir.ui.view" id="vol_form_view">
+            <field name="name">Vol Form</field>
+            <field name="model">kevol.vol</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="dateDepart"/>
+                        <field name="dateArrive"/>
+                        <field name="villeDepart"/>
+                        <field name="villeArrive"/>
+                        <field name="retard"/>
+                        <field name="avion_id"/>
 
 
-                    </notebook>
-</form>
-</field>
-</record>
+                    </group>
 
-    <record model="ir.actions.act_window" id="vol_action_window">
-      <field name="name">vol window</field>
-      <field name="res_model">kevol.vol</field>
-      <field name="view_mode">calendar,tree,form</field>
-    </record>
+                </form>
+            </field>
+        </record>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="vol.action_server">
-      <field name="name">vol server</field>
-      <field name="model_id" ref="model_vol_vol"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <record model="ir.actions.act_window" id="vol_action_window">
+            <field name="name">vol window</field>
+            <field name="res_model">kevol.vol</field>
+            <field name="view_mode">calendar,tree,form</field>
+        </record>
 
-    <!-- Top menu item -->
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="vol.action_server">
+          <field name="name">vol server</field>
+          <field name="model_id" ref="model_vol_vol"/>
+          <field name="state">code</field>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
 
-    <menuitem name="Kevol" id="kevol.menu_root"/>
+        <!-- Top menu item -->
 
-    <!-- menu categories -->
+        <menuitem name="Kevol" id="kevol.menu_root"/>
 
-    <menuitem name="Vols" id="kevol_vol_cat" parent="kevol.menu_root"/>
+        <!-- menu categories -->
 
-    <!-- actions -->
+        <menuitem name="Vols" id="kevol_vol_cat" parent="kevol.menu_root"/>
 
-    <menuitem name="List of vols" id="kevol_vol_list" parent="kevol_vol_cat"
-              action="vol_action_window"/>
+        <!-- actions -->
 
-  </data>
+        <menuitem name="List of vols" id="kevol_vol_list" parent="kevol_vol_cat"
+                  action="vol_action_window"/>
+
+    </data>
 </odoo>

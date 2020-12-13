@@ -1,79 +1,74 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="kevol_avion_list">
-      <field name="name">avion list</field>
-      <field name="model">kevol.avion</field>
-      <field name="arch" type="xml">
-        <tree>
-<field name="type"/>
-<field name="modele"/>
-<field name="nb"/>
-        </tree>
-      </field>
-    </record>
- <record model="ir.ui.view" id="avion_form_view">
-<field name="name">Avion Form</field>
-<field name="model">kevol.avion</field>
-<field name="arch" type="xml">
-<form>
-<group>
-<field name="type"/>
-<field name="modele"/>
-<field name="nb"/>
-<field name="siege_ids"/>
-<field name="compagnie_id"/>
+        <record model="ir.ui.view" id="kevol_avion_list">
+            <field name="name">avion list</field>
+            <field name="model">kevol.avion</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="type"/>
+                    <field name="modele"/>
+                    <field name="nb"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="avion_form_view">
+            <field name="name">Avion Form</field>
+            <field name="model">kevol.avion</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="type"/>
+                        <field name="modele"/>
+                        <field name="nb"/>
 
 
-
-</group>
-        <notebook>
-        <page string="List of sieges">
-                            <field name="siege_ids"/>
+                    </group>
+                    <notebook>
+                        <page string="List of pilotes">
+                            <field name="pilote_ids"/>
                         </page>
                     </notebook>
-</form>
-</field>
-</record>
 
-    <record model="ir.actions.act_window" id="avion_action_window">
-      <field name="name">avion window</field>
-      <field name="res_model">kevol.avion</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+                </form>
+            </field>
+        </record>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="vol.action_server">
-      <field name="name">vol server</field>
-      <field name="model_id" ref="model_vol_vol"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <record model="ir.actions.act_window" id="avion_action_window">
+            <field name="name">avion window</field>
+            <field name="res_model">kevol.avion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
-    <!-- Top menu item -->
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="vol.action_server">
+          <field name="name">vol server</field>
+          <field name="model_id" ref="model_vol_vol"/>
+          <field name="state">code</field>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
 
-    <menuitem name="Kevol" id="kevol.menu_root"/>
+        <!-- Top menu item -->
 
-    <!-- menu categories -->
+        <menuitem name="Kevol" id="kevol.menu_root"/>
 
-          <menuitem name="Avion" id="kevol_avion_cat" parent="kevol.menu_root"/>
+        <!-- menu categories -->
 
-    <!-- actions -->
+        <menuitem name="Avion" id="kevol_avion_cat" parent="kevol.menu_root"/>
 
-
-
+        <!-- actions -->
 
 
-    <menuitem name="List of avions" id="kevol_avion_list" parent="kevol_avion_cat"
-              action="avion_action_window"/>
-  </data>
+        <menuitem name="List of avions" id="kevol_avion_list" parent="kevol_avion_cat"
+                  action="avion_action_window"/>
+    </data>
 </odoo>
